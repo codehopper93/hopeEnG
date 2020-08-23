@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>온라인 문의목록</title>
+<title>오류 페이지 - (주)희망이앤지</title>
 <%@ include file="/WEB-INF/views/comm/header.jsp" %>
 <link href="${pageContext.request.contextPath}/css/error.css" rel="stylesheet" />
 </head>

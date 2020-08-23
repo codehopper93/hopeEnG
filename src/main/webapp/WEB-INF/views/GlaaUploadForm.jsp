@@ -213,9 +213,9 @@ function insertGlaaCallback(obj){
 <div id="wrap">
     <div id="container">
         <div class="inner">       
-            <h2>게시글 작성</h2>
+            <h2 class="" style="margin-bottom:30px;" > 게시글 작성</h2>
             <form id="gllyForm" name="gllyForm" action="/glaa/Glaa1000_insert" enctype="multipart/form-data" method="post" onsubmit="return false;">
-                <table width="100%" class="table02">
+                <table width="100%" class="table">
                 <caption><strong><span class="t_red">*</span> 표시는 필수입력 항목입니다.</strong></caption>
                     <colgroup>
                         <col width="20%">
@@ -225,7 +225,7 @@ function insertGlaaCallback(obj){
                    		<tr>
                             <th>메인화면 표시 여부<span class="t_red">*</span></th>
                             <td>
-                            <select id="showMainYn" name="showMainYn">
+                            <select id="showMainYn" name="showMainYn" class="custom-select">
 							<option value="Y">표시</option>
 							<option value="N" selected>미표시</option>
 							</select>
@@ -233,15 +233,15 @@ function insertGlaaCallback(obj){
                         </tr>
                         <tr>
                             <th>제목<span class="t_red">*</span></th>
-                            <td><input id="gllyNm" name="gllyNm" value="" class="tbox01"/></td>
+                            <td><input id="gllyNm" name="gllyNm" value="" class="form-control"/></td>
                         </tr>
                         <tr>
                             <th>내용<span class="t_red">*</span></th>
-                            <td><textarea id="gllyCts" name="gllyCts" cols="30" rows="10" class="textarea01"></textarea></td>
+                            <td><textarea id="gllyCts" name="gllyCts" cols="30" rows="10" class="form-control"></textarea></td>
                         </tr>
                         <tr>
                             <th scope="row">첨부파일</th>
-                            <td><input multiple="multiple" type="file" id="files[0]" name="files[0]" value=""></td>
+                            <td><input multiple="multiple" type="file" id="files[0]" name="files[0]" value="" class=""></td>
                         </tr>
                        
 					
@@ -249,11 +249,12 @@ function insertGlaaCallback(obj){
                 </table>
             </form>
             <div class="btn_right mt15">
-                <button type="button" class="btn black mr5" onclick="javascript:goGlaaList();">목록으로</button>
-                <button type="button" class="btn black" onclick="javascript:insertGlaa();">등록하기</button>
+                <button type="button" class="btn-group-toggle" onclick="javascript:goGlaaList();">목록으로</button>
+                <button type="button" class="btn-group-toggle" onclick="javascript:insertGlaa();">등록하기</button>
             </div>
         </div>
     </div>
 </div>
 </body>
+<%@ include file="/WEB-INF/views/comm/footer.jsp" %>
 </html>
