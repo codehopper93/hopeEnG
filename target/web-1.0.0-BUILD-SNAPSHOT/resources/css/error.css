@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/*
+*	홈페이지 공통 에러 css 적용
+*	
+*
+*/
+
+.fundo{
+  animation: scales 3s alternate  infinite;
+  transform-origin: center;
+}
+.pao-baixo{
+   animation: rotatepao 14s cubic-bezier(.1,.49,.41,.97)  infinite;
+  transform-origin: center;
+}
+.pao-cima{
+   animation: rotatepao 7s 1s cubic-bezier(.1,.49,.41,.97)  infinite;
+  transform-origin: center;
+}
+.olhos{animation: olhos   2s  alternate  infinite;
+   transform-origin: center;
+}
+
+.left-sparks{animation: left-sparks   4s  alternate  infinite;
+      transform-origin: 150px 156px;
+}
+
+.right-sparks{animation: left-sparks   4s  alternate  infinite;
+      transform-origin: 310px 150px;
+}
+
+.olhos{animation: olhos   2s  alternate  infinite;
+   transform-origin: center;
+}
+@keyframes scales{
+  from { transform: scale(0.98)}
+  to{ transform: scale(1)}
+}
+
+@keyframes rotatepao{
+  0% { transform:  rotate(0deg)}
+  50% , 60%{ transform:  rotate(-20deg)}
+  100%{  transform:  rotate(0deg) }
+ 
+}
+
+@keyframes olhos{
+  0%{
+    transform: rotateX(0deg);
+  }
+   100%{
+    transform: rotateX(30deg);
+  }
+}
+
+@keyframes left-sparks{
+  0%{
+    opacity: 0; 
+  }
+  
+}
+
+
+.main{
+  
+  min-height: 350px;
+  margin: 0px auto;
+  width: auto;
+  max-width: 760px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: dash 4s   alternate infinite;
+}
+
+@keyframes dash{
+   0%, 30%{
+     fill: 4B4B62;
+    stroke-dashoffset:   0;
+  }
+   80%,100%{
+     fill: transparent;
+    stroke-dashoffset:  -200;
+  }
+   
+  
+}
+
+.full-screen {
+  width: 100vw;
+  color: white;
+  font-family: 'Arial Black';
+  text-align: center;
+}
+
+.container-err {
+  padding-top: 4em;
+  display: block;
+  margin: 0 auto;
+}
+
+.error-num {
+  font-size: 8em;
+  color: #212529;
+}
+
+.eye {
+  color: #212529;
+  border-radius: 50%;
+  display: inline-block;
+  height: 100px;
+  position: relative;
+  background-color: #212529;
+  width: 100px;
+}
+.eye::after {
+    background: #fff;
+    border-radius: 50%;
+    bottom: 56.1px;
+    content: ' ';
+    height: 33px;
+    position: absolute;
+    right: 33px;
+    width: 33px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.full-screen p {
+  margin-bottom: 4em;
+  color:#212529;
+}
+
+.full-screen a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  &:hover {
+    color: lightgray;
+  }
+}
+
+.err-div{width:100%;text-align:center;margin:0 0 60px 0}
+.text1-err{font-size:32px;width:100%;text-align:center;font-weight:bold;color:##212529;}
+.text2-err{font-size:24px;color:#a29d9d;font-weight:bold}
+.text3-err{margin-top:30px;font-size:20px;color:#9d9696;}
