@@ -72,24 +72,29 @@
 		//페이징 처리
 		var paging = "";
 		$("#paging").empty();
+		
+		
 		$("#paging").append("<ul>");
-
-		for(var i=((result.paging.startPage-1)*result.paging.cntPerPage)+1; i<=result.paging.endPage; i++){
+		
+		if(result.paging.startPage > 1){
+			$("#paging > ul").prepend("<li><a class='move prev' href='javascript:movePage("+((result.paging.startPage-1)*result.paging.cntPerPage)+")'>이전</a></li>");
+			$("#paging > ul").prepend("<li><a class='move first' href='javascript:movePage(1)'>처음</a></li>");
+		}
+		//for(var i=((result.paging.startPage-1)*result.paging.cntPerPage)+1; i<=result.paging.endPage; i++){
+		for(var i=result.paging.endPage; i>=((result.paging.startPage-1)*result.paging.cntPerPage)+1; i--){	
 			paging += "<li><a href='javascript:movePage("+i+")'>"+i+"</a></li>";
 			pageNum = i;
 		}
 		$("#paging ul").append(paging);
+		if(result.paging.endPage < result.paging.lastPage){
+			$("#paging > ul").append("<li><a class='move next' href='javascript:movePage("+(result.paging.endPage+1)+")'>다음</a></li>");
+			$("#paging > ul").append("<li><a class='move end' href='javascript:movePage("+(result.paging.lastPage)+")'>끝</a></li>");
+		}
 		$("#paging").append("</ul>");
 		
-		if(result.paging.startPage > 1){
-			$("#paging").prepend("<span onclick='movePage("+((result.paging.startPage-1)*result.paging.cntPerPage)+")'>prev</span>");
-			$("#paging").prepend("<span onclick='movePage(1)'>시작</span>");
-		}
 		
-		if(result.paging.endPage < result.paging.lastPage){
-			$("#paging").append("<span onclick='movePage("+(result.paging.endPage+1)+")'>next</span>");
-			$("#paging").append("<span onclick='movePage("+(result.paging.lastPage)+")'>끝</span>");
-		}
+		
+		
 	}
 	
 	function movePage(num){
@@ -128,11 +133,16 @@
 			}
 		});
 	}
-	
+	$(document).ajaxStart(function(){
+		$('#Progress_Loading').show(); //ajax실행시 로딩바를 보여준다.
+	})
+	$(document).ajaxStop(function(){
+		$('#Progress_Loading').hide(); //ajax종료시 로딩바를 숨겨준다.
+	});
 </script>
 <div class="inner">
 	<h2 class="" > 온라인 문의 </h2>
-	<div>
+	<div style="margin-bottom:15px;">
 		<select id="select"  class="form-control" style="width:100px;float:left;">
 			<option value="bordNm">제목</option>
 			<option value="userNm">이름</option>

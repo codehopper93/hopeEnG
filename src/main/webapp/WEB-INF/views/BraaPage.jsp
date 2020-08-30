@@ -204,8 +204,8 @@ function checkAfterAction(num){
 	<div style="margin-bottom:15px;">
 		<label for="agree" style="width:30%;min-width:200px;">개인정보 수집 및 이용 동의</label>
 		<span>
-			1. 목적 : 문의글 작성자, 문의 글 확인, 협의 진행, 고지사항 전달, 등록자와의 원활한 의사소통
-			2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호
+			1. 목적 : 문의글 작성자, 문의 글 확인, 협의 진행, 고지사항 전달, 등록자와의 원활한 의사소통<br>
+			2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호<br>
 		</span>
 		<input type="checkbox" id="checkInfo">
 		<span for="">개인정보 수집 및 이용에 동의합니다.</span>
@@ -228,23 +228,23 @@ function checkAfterAction(num){
 	<label for="pwd">비밀번호</label>
 	<p/>
 	<input class="form-control-small" type="password" id="userPw" name="userPw">
-	<span>비밀번호 분실 시 찾을 수 없습니다.</span>
+	<span style="color:#ada8a8;">비밀번호 분실 시 찾을 수 없습니다.</span>
 </div>
 <div id="pwdCheckDiv">
 	<label for="pwdCheck">비밀번호 확인</label>
 	<p/>
-	<input class="form-control-mid" type="password" id="userPwCheck" name="userPwCheck">
-	<span id="pwCheckMsg"></span>
+	<input class="form-control-small" type="password" id="userPwCheck" name="userPwCheck">
+	<span id="pwCheckMsg" style="color:#ada8a8;"></span>
 </div>
 <div id="email">
 	<label for="email">이메일</label>
 	<p/>
-	<input type="text" id="userEmail" name="userEmail" value="${braa.userEmail}" placeholder="you@example.com">
+	<input class="form-control-mid" type="text" id="userEmail" name="userEmail" value="${braa.userEmail}" placeholder="you@example.com">
 </div>
 <div id="tel">
 	<label for="tel">연락처</label>
 	<p/>
-	<input type="text" id="userPhone" name="userPhone" value="${braa.userPhone}" placeholder="00*-000*-0000" maxlength="13">
+	<input class="form-control-mid" type="text" id="userPhone" name="userPhone" value="${braa.userPhone}" placeholder="00*-000*-0000" maxlength="13">
 </div>
 <div>
 	<label for="title">제목</label>
@@ -254,7 +254,7 @@ function checkAfterAction(num){
 <div>
 	<label for="content">내용</label>
 	<p/>
-	<textarea id="bordCts" name="bordCts" style="resize: none;" placeholder="2000자 이내로 작성해주세요." maxlength="2000">${braa.bordCts}</textarea>
+	<textarea id="bordCts" class="form-control" style="width:90%;" name="bordCts" cols="30" rows="10" style="resize: none;" placeholder="2000자 이내로 작성해주세요.">${braa.bordCts}</textarea>
 </div>
 <button type="reset" id="reset">초기화</button>
 <button type="button" id="write" onclick="btnClickAction('insert')">등록</button>

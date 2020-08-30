@@ -75,9 +75,15 @@
 			}
 		});
 	}
-	
+	$(document).ajaxStart(function(){
+		$('#Progress_Loading').show(); //ajax실행시 로딩바를 보여준다.
+	})
+	$(document).ajaxStop(function(){
+		$('#Progress_Loading').hide(); //ajax종료시 로딩바를 숨겨준다.
+	});
 </script>
 <div class="inner">
+<h2 class="" > 갤러리</h2>
 	<div style="margin-bottom:15px;">
 		<select id="select" class="form-control" style="width:100px;float:left;">
 			<option value="bordNm">제목</option>

@@ -244,6 +244,13 @@ button:hover {
   outline: 5px auto -webkit-focus-ring-color; */
 }
 
+.masthead button:focus{
+	border:none;
+}
+.masthead button:hover {
+	background-color: currentColor;
+}
+
 input,
 button,
 select,
@@ -381,11 +388,18 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 2.5rem;
 }
-
+.page-section h2, .page-section .h2{
+  font-size: 2rem;
+  padding-top: 45px;
+  margin-bottom:30px;
+  background:none;
+}
 h2, .h2 {
   font-size: 2rem;
   padding-top: 45px;
   margin-bottom:30px;
+  padding-bottom:15px;
+  background: url(/image/img/bg_h2_top.gif) no-repeat left bottom;
 }
 
 h3, .h3 {
@@ -10657,7 +10671,57 @@ section#contact form#contactForm :-ms-input-placeholder {
     background-color: #fff;
     text-decoration:none;
 }
+
+.paging li a.move{
+	width: 37px;
+    height: 37px;
+    border: 0;
+    background: #fff url(/image/img/braa/icon_paging.png) no-repeat 0 0;
+}
+
+.paging li a.next{
+	background-position: -84px 0;
+	text-indent:-9999px;
+}
+.paging li a.prev{
+	background-position: -42px 0;
+	text-indent:-9999px;
+}
+.paging li a.first{
+	background-position: 0 0;
+	text-indent:-9999px;
+}
+.paging li a.end{
+	background-position: -126px 0;
+	text-indent:-9999px;
+}
+
 .paging li a:hover{
     background-color: #636363;
     color: #fff;
 }
+
+.Progress_Loading{
+	position: fixed;
+	height: 100%;
+    z-index: 9999;
+    width: 100%;
+    background: white;
+    filter: opacity(0.5);
+    display:none;
+}
+
+.Progress_Loading img{
+	display: table;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+
+.loadingTxt{
+	background:white;
+	display:table;
+	margin:0 auto;
+	font-size: 33px;
+    font-weight: bold;
+}
+

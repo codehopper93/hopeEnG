@@ -128,33 +128,33 @@
 		    </div> -->
         
             <div class="container" style="background:url('../image/img/main/main_bg1.jpg') no-repeat center; height:640px;  background-size:100%; max-width:none;">
-                <div class="masthead-subheading">성장하는 회사</div>
-                <div class="masthead-heading text-uppercase">퇴사를 위한 회사</div>
+                <div class="masthead-subheading">회사소개 문구1</div>
+                <div class="masthead-heading text-uppercase">상세 소개1</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/braa/braa.do">문의하기</a>
             </div>
             <div class="container" style="background:url('../image/img/main/main_bg2.jpg') no-repeat center; height:640px; background-size:100%; max-width:none;">
-                <div class="masthead-subheading">연봉 1억2천만원 !!</div>
-                <div class="masthead-heading text-uppercase">퇴사 하고 싶다</div>
+                <div class="masthead-subheading">회사소개 문구2</div>
+                <div class="masthead-heading text-uppercase">상세 소개2</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/braa/braa.do">문의하기</a>
             </div>
             <div class="container" style="background:url('../image/img/main/main_bg3.jpg') no-repeat center; height:640px; background-size:100%; max-width:none;">
-                <div class="masthead-subheading">배우는 회사!</div>
-                <div class="masthead-heading text-uppercase">하루 3시간 근무하는 회사</div>
+                <div class="masthead-subheading">회사소개 문구3</div>
+                <div class="masthead-heading text-uppercase">상세 소개3</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/braa/braa.do">문의하기</a>
             </div>
             <div class="container" style="background:url('../image/img/main/main_bg1.jpg') no-repeat center; height:640px; background-size:100%; max-width:none;">
-                <div class="masthead-subheading">배가 고프다!</div>
-                <div class="masthead-heading text-uppercase">소고기 사주는  회사</div>
+                <div class="masthead-subheading">회사소개 문구4</div>
+                <div class="masthead-heading text-uppercase">상세 소개4</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/braa/braa.do">문의하기</a>
             </div>
             <div class="container" style="background:url('../image/img/main/main_bg2.jpg') no-repeat center; height:640px; background-size:100%; max-width:none;">
-                <div class="masthead-subheading">집가까운 회사!</div>
-                <div class="masthead-heading text-uppercase">해외여행 가고싶다</div>
+                <div class="masthead-subheading">회사소개 문구5</div>
+                <div class="masthead-heading text-uppercase">상세 소개5</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/braa/braa.do">문의하기</a>
             </div>
             <div class="container" style="background:url('../image/img/main/main_bg3.jpg') no-repeat center; height:640px; background-size:100%; max-width:none;">
-                <div class="masthead-subheading">개발자를 위한 회사</div>
-                <div class="masthead-heading text-uppercase">맥북 최신 제공</div>
+                <div class="masthead-subheading">회사소개 문구6</div>
+                <div class="masthead-heading text-uppercase">상세 소개6</div>
                 <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="/braa/braa.do">문의하기</a>
             </div>
             </section>

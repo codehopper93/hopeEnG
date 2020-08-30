@@ -59,7 +59,7 @@
 		});
 	}
 </script>
-	<form style="height:250px;">
+	<form style="height:230px;">
 		<div id="guideMsg">
 			<span></span> 
 		</div>

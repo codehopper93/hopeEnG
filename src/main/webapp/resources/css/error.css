@@ -148,7 +148,7 @@
   }
 }
 
-.err-div{width:100%;text-align:center;margin:0 0 60px 0}
+.err-div{width:100%;text-align:center;margin:0 0 60px 0;min-height:320px;}
 .text1-err{font-size:32px;width:100%;text-align:center;font-weight:bold;color:##212529;}
 .text2-err{font-size:24px;color:#a29d9d;font-weight:bold}
 .text3-err{margin-top:30px;font-size:20px;color:#9d9696;}

@@ -28,10 +28,15 @@
     <script src="${pageContext.request.contextPath}/js/jquery-3.5.1.min.js" type="text/javascript"></script>
     <script>
     $(function(){
-    	
+    	//$('#Progress_Loading').hide();
     });
-    
     </script>
+	    <div id="Progress_Loading" class="Progress_Loading"><!-- 로딩바 -->
+			<img src="/image/img/loading_progress.gif" alt="로딩중입니다..."/>
+			<div class="loadingTxt"style="">
+				화면 로딩 중입니다.
+			</div>
+		</div>
      
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">

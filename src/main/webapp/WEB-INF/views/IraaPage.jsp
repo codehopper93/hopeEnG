@@ -36,12 +36,15 @@
 	</div>
 	<div>
 		<div style="width: 30%;float: left;text-align: center; border-right:1px solid #7a7676;">
-			회사 인원	
+			<img class="img-fluid d-block mx-auto" src="/image/img/logos/creative-market.jpg" alt="" />
+			회사 인원
 		</div>
 		<div style="width: 30%; float:left;text-align: center;border-right: 1px solid #7a7676;">
+			<img class="img-fluid d-block mx-auto" src="/image/img/logos/creative-market.jpg" alt="" />
 			고객사 수
 		</div>
 		<div style="width: 30%;float: left;text-align: center;">
+			<img class="img-fluid d-block mx-auto" src="/image/img/logos/creative-market.jpg" alt="" />
 			보유 시스템
 		</div>
 	</div>

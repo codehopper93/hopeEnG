@@ -36,11 +36,11 @@ function submitVal(val){
 </script>
 
 <div class="inner">
-	<div id="loginBox" style="position: relative;width: 50%;min-width: 350px;height: 400px;margin-left: 20%;top: 50px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);background-color: #fafafa;">
+	<div id="loginBox" style="position: relative;width: 50%;min-width: 350px;height: 400px;margin-left: 25%;top: 50px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);background-color: #fafafa;">
 		<div style="margin-left:30%;margin-bottom:40px;">
 			<h2>관리자 로그인</h2>
 		</div>
-		<div style="position:relative; width: 50%; height: 50%;margin-left:30%;">
+		<div style="position:relative; width: 50%; height: 50%;margin-left:25%;">
 			<form id="loginForm" name="loginForm" method="post" style="box-shadow:none;">
 				
 				
