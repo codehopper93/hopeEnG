@@ -239,12 +239,12 @@ function checkAfterAction(num){
 <div id="email">
 	<label for="email">이메일</label>
 	<p/>
-	<input class="form-control-mid" type="text" id="userEmail" name="userEmail" value="${braa.userEmail}">
+	<input type="text" id="userEmail" name="userEmail" value="${braa.userEmail}" placeholder="you@example.com">
 </div>
 <div id="tel">
 	<label for="tel">연락처</label>
 	<p/>
-	<input class="form-control-mid" type="text" id="userPhone" name="userPhone" value="${braa.userPhone}">
+	<input type="text" id="userPhone" name="userPhone" value="${braa.userPhone}" placeholder="00*-000*-0000" maxlength="13">
 </div>
 <div>
 	<label for="title">제목</label>
@@ -254,7 +254,7 @@ function checkAfterAction(num){
 <div>
 	<label for="content">내용</label>
 	<p/>
-	<textarea id="bordCts" class="form-control" style="width:90%;" name="bordCts" cols="30" rows="10" style="resize: none;" placeholder="2000자 이내로 작성해주세요.">${braa.bordCts}</textarea>
+	<textarea id="bordCts" name="bordCts" style="resize: none;" placeholder="2000자 이내로 작성해주세요." maxlength="2000">${braa.bordCts}</textarea>
 </div>
 <button type="reset" id="reset">초기화</button>
 <button type="button" id="write" onclick="btnClickAction('insert')">등록</button>

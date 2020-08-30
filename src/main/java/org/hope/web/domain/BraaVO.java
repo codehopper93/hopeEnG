@@ -16,7 +16,6 @@ public class BraaVO {
 	private String modyDate;
 	private String bordRelease;
 	
-	
 	public int getTotalCnt() {
 		return totalCnt;
 	}
@@ -101,5 +100,4 @@ public class BraaVO {
 	public void setBordRelease(String bordRelease) {
 		this.bordRelease = bordRelease;
 	}
-	
 }

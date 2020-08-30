@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
 
 import org.hope.web.domain.BraaVO;
 import org.hope.web.service.BraaService;
@@ -57,7 +58,6 @@ public class BraaController {
 		@RequestMapping("Braa1000_confirmPasswd.do")
 		@ResponseBody
 		public Boolean braaConfirmPasswd(@RequestBody HashMap<String, String> data) throws Exception {
-			//data.forEach((key,value) -> logger.info(key+":"+value));
 			return braaService.confirmPasswd(data);
 		}
 
@@ -65,17 +65,28 @@ public class BraaController {
 		@RequestMapping("/Braa1000_select.do")
 		@ResponseBody 
 		public Map<String, Object> braaSelect(@RequestParam HashMap<String, Object> paramMap) {	
-			paramMap.forEach((key,value) -> logger.info(key+":"+value));
+			//paramMap.forEach((key,value) -> logger.info(key+":"+value));
 			Map<String, Object> map = braaService.selectBraa(paramMap);
 			return map;
 		}
 		
 		//온라인 문의글 상세 조회 
 		@RequestMapping("/Braa1000_detailSelect.do")
-		public String braaDetailSelect(@RequestParam String bordNum, Model model) {
-			BraaVO braa = braaService.selectDetailBraa(bordNum);
+		public String braaDetailSelect(@RequestParam HashMap<String, String> paramMap, HttpSession session, Model model) {
+			String updMode = paramMap.get("updMode");
+			BraaVO braa = braaService.selectDetailBraa(paramMap.get("bordNum"));
+			braa = braaService.encrypBraa(braa, updMode, session);
 			model.addAttribute("braa", braa);
 			return "BraaPage";
+		}
+		
+		//온라인 문의글 상세 조회 (이메일, 연락처)
+		@RequestMapping("/Braa1000_detailSelectUpd.do")
+		@ResponseBody
+		public BraaVO braaDetailSelectUpd(@RequestParam String bordNum, Model model) {
+			BraaVO braa = braaService.selectDetailBraa(bordNum);
+			model.addAttribute("braa", braa);
+			return braa;
 		}
 		
 		//컨트롤러에서 익셉션 잡아주기

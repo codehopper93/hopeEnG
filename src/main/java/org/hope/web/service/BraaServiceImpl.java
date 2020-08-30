@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.hope.web.controller.BraaController;
 import org.hope.web.dao.BraaDAO;
 import org.hope.web.domain.BraaVO;
@@ -110,6 +112,27 @@ public class BraaServiceImpl implements BraaService{
 			str = sha256(val.getUserPw());
 		}
 		
+	}
+
+	@Override
+	public BraaVO encrypBraa(BraaVO braaVO, String updMode, HttpSession session) {
+		// TODO Auto-generated method stub
+		String sessionChk = (String) session.getAttribute("name");
+		String email = "";
+		String tel = "";
+		//세션이 없고 공개글일 때 이메일/연락처 보여주면 안됨
+		if(sessionChk == null || sessionChk.equals("")){
+			if(updMode == null || "".equals(updMode)){
+				if(braaVO.getBordRelease().equals("Y")){ //공개글 일 때
+					email = braaVO.getUserEmail();
+					tel = braaVO.getUserPhone();
+	
+					braaVO.setUserEmail(email.replaceAll(email, "******"));
+					braaVO.setUserPhone(tel.replaceAll(tel, "******"));
+				}
+			}
+		}
+		return braaVO;
 	}
 
 }
