@@ -179,7 +179,7 @@ function btnClickAction(val){
 			}
 		}else{ // 수정불가 모드  비번 입력해야함
 			//수정모드로 들어가기 위한 비번 입력창
-			window.open("Braa1000_confirmPasswdWindow.do?bordNum="+num,"","scrollbars=no,status=no,resizable=no,width=300,height=150");
+			window.open("Braa1000_confirmPasswdWindow.do?bordNum="+num,"","scrollbars=no,status=no,resizable=no,width=300,height=180");
 			return;
 		}
 	}
@@ -197,24 +197,24 @@ function checkAfterAction(num){
 }
 </script>
 <div class="inner">
+<h2 class="" > 온라인 문의 작성하기</h2>
 <form name="bordWriteForm" id="bordWriteForm" method="POST">
 <input type="hidden" name="bordNo" id="bordNo" value=0>
 <div id="infoCheck">
-	<div>
-		<label for="agree">개인정보 수집 및 이용 동의</label>
-		<div>
-			블라블라_상민님이 내용 채울실 것
-		</div>
+	<div style="margin-bottom:15px;">
+		<label for="agree" style="width:30%;min-width:200px;">개인정보 수집 및 이용 동의</label>
+		<span>
+			1. 목적 : 문의글 작성자, 문의 글 확인, 협의 진행, 고지사항 전달, 등록자와의 원활한 의사소통
+			2. 항목 : 아이디(이메일주소), 비밀번호, 이름, 생년월일, 휴대폰번호
+		</span>
+		<input type="checkbox" id="checkInfo">
+		<span for="">개인정보 수집 및 이용에 동의합니다.</span>
 	</div>
-	<div>
-	<input type="checkbox" id="checkInfo">
-	<label for="">개인정보 수집 및 이용에 동의합니다.</label>
-	</div>
-	</div>
+</div>
 <div>
 	<label for="name">공개여부</label>
 	<p/>
-	<select id="bordRelease" name="bordRelease">
+	<select id="bordRelease" class="form-control-small" name="bordRelease" >
 		<option value="Y">공개</option>
 		<option value="N">비공개</option>
 	</select>
@@ -222,39 +222,39 @@ function checkAfterAction(num){
 <div>
 	<label for="name">이름</label>
 	<p/>
-	<input type="text" id="userNm" name="userNm" value="${braa.userNm}">
+	<input class="form-control-small" type="text" id="userNm" name="userNm" value="${braa.userNm}">
 </div>
 <div id="pwdDiv">
 	<label for="pwd">비밀번호</label>
 	<p/>
-	<input type="password" id="userPw" name="userPw">
+	<input class="form-control-small" type="password" id="userPw" name="userPw">
 	<span>비밀번호 분실 시 찾을 수 없습니다.</span>
 </div>
 <div id="pwdCheckDiv">
 	<label for="pwdCheck">비밀번호 확인</label>
 	<p/>
-	<input type="password" id="userPwCheck" name="userPwCheck">
+	<input class="form-control-mid" type="password" id="userPwCheck" name="userPwCheck">
 	<span id="pwCheckMsg"></span>
 </div>
 <div id="email">
 	<label for="email">이메일</label>
 	<p/>
-	<input type="text" id="userEmail" name="userEmail" value="${braa.userEmail}">
+	<input class="form-control-mid" type="text" id="userEmail" name="userEmail" value="${braa.userEmail}">
 </div>
 <div id="tel">
 	<label for="tel">연락처</label>
 	<p/>
-	<input type="text" id="userPhone" name="userPhone" value="${braa.userPhone}">
+	<input class="form-control-mid" type="text" id="userPhone" name="userPhone" value="${braa.userPhone}">
 </div>
 <div>
 	<label for="title">제목</label>
 	<p/>
-	<input type="text" id="bordNm" name="bordNm" value="${braa.bordNm}">
+	<input class="form-control" style="width:90%;" type="text" id="bordNm" name="bordNm" value="${braa.bordNm}">
 </div>
 <div>
 	<label for="content">내용</label>
 	<p/>
-	<textarea id="bordCts" name="bordCts" style="resize: none;" placeholder="2000자 이내로 작성해주세요.">${braa.bordCts}</textarea>
+	<textarea id="bordCts" class="form-control" style="width:90%;" name="bordCts" cols="30" rows="10" style="resize: none;" placeholder="2000자 이내로 작성해주세요.">${braa.bordCts}</textarea>
 </div>
 <button type="reset" id="reset">초기화</button>
 <button type="button" id="write" onclick="btnClickAction('insert')">등록</button>
@@ -262,6 +262,7 @@ function checkAfterAction(num){
 <button type="button" id="braaUpdate" onclick="btnClickAction('update')">수정</button>
 <button type="button" id="braaDelete" onclick="btnClickAction('delete')">삭제</button>
 </form>
+<div class="clear-space"></div>
 </div>
 <%@ include file="/WEB-INF/views/comm/footer.jsp" %>
 </body>

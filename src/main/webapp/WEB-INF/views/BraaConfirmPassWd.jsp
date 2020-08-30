@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>비밀번호 확인</title>
+<link href="${pageContext.request.contextPath}/css/styles.css" rel="stylesheet" />
 </head>
 <body>
 <script src="${pageContext.request.contextPath}/js/jquery-3.5.1.min.js" type="text/javascript"></script>
@@ -58,12 +59,12 @@
 		});
 	}
 </script>
-	<form>
+	<form style="height:250px;">
 		<div id="guideMsg">
 			<span></span> 
 		</div>
 		<div>
-			<input type="password" id="pw">
+			<input class="form-control-small"  type="password" id="pw">
 		</div>
 		<div>
 			<button type="button" id ="confirmPw">확인</button>

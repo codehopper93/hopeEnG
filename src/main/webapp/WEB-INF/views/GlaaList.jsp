@@ -78,20 +78,20 @@
 	
 </script>
 <div class="inner">
-	<div>
-		<select id="select">
+	<div style="margin-bottom:15px;">
+		<select id="select" class="form-control" style="width:100px;float:left;">
 			<option value="bordNm">제목</option>
 			<option value="userNm">이름</option>
 		</select>
-		<input type="text" id="searchText"/>
-		<button id="searchBtn">검색</button>
+		<input class="form-control-mid" type="text" id="searchText" style="float:left;margin-left:5px;"/>
+		<button id="searchBtn" style="margin-left:10px;">검색</button>
 	</div>
 	<div>
-		<table id="glaaTable" width="500" cellpadding="7" cellspacing="0" border="1">
+		<table class="table" id="glaaTable" width="500" cellpadding="7" cellspacing="0" border="1">
 		</table>
 	</div>
 	<div>
-		<button id="write">작성하기</button>
+		<button id="write" style="float:right;">작성하기</button>
 	</div>
 </div>
 </body>

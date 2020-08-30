@@ -38,11 +38,13 @@
 	})
 
 	function braaSelectCallback(result){
+		var totalCnt = result.braaList.length;
+		
 		$("#totalCnt").empty();
 		$("#braaTable").empty();
 		$("#braaTable").empty();
 		
-		$("#totalCnt").append("총" + result.paging.total + "게시글");
+		$("#totalCnt").append("총 : " + totalCnt + " 게시글");
 		var braaAppend = "<tr><th>번호</th><th>제목</th><th>작성자</th><th>날짜</th><th>조회수</th><th>처리상태</th><th>공개여부</th></tr>";
 		var stus = "";
 		var click = "";
@@ -73,7 +75,7 @@
 		$("#paging").append("<ul>");
 
 		for(var i=((result.paging.startPage-1)*result.paging.cntPerPage)+1; i<=result.paging.endPage; i++){
-			paging += "<li onclick='movePage("+i+")'>"+i+"</li>";
+			paging += "<li><a href='javascript:movePage("+i+")'>"+i+"</a></li>";
 			pageNum = i;
 		}
 		$("#paging ul").append(paging);
@@ -129,25 +131,27 @@
 	
 </script>
 <div class="inner">
+	<h2 class="" > 온라인 문의 </h2>
 	<div>
-		<span id="totalCnt"></span>
-		<select id="select">
+		<select id="select"  class="form-control" style="width:100px;float:left;">
 			<option value="bordNm">제목</option>
 			<option value="userNm">이름</option>
 		</select>
-		<input type="text" id="searchText"/>
-		<button id="searchBtn">검색</button>
+		<input  class="form-control-mid" type="text" id="searchText" style="float:left;margin-left:5px;"/>
+		<button id="searchBtn" style="margin-left:10px;">검색</button>
+		<span id="totalCnt" class="totalCnt"></span>
 	</div>
 	<div>
-		<table id="braaTable" width="500" cellpadding="7" cellspacing="0" border="1">
+		<table id="braaTable" width="500" cellpadding="7" cellspacing="0" border="1" class="table">
 		</table>
 	</div>
-	<div id="paging">
+	<div id="paging" class="paging">
 
 	</div>
 	<div>
-		<button id="write">작성하기</button>
+		<button id="write" style="float:right;">작성하기</button>
 	</div>
+	<div class="clear-space"></div>
 </div>
 </body>
 <%@ include file="/WEB-INF/views/comm/footer.jsp" %>

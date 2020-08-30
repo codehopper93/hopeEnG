@@ -35,23 +35,32 @@ function submitVal(val){
 }
 </script>
 
-
-<div style="border: solid; position:absolute; width: 40%; height: 50%;">
-	<form id="loginForm" name="loginForm" method="post">
-		<div style="width: 100%; border: solid; float: left;">
-			<input type="text" id="adminId" name="adminId" placeholder="아이디" style="width: 100%">
-			<input type="password" id="adminPw" name="adminPw" placeholder="비밀번호"style="width: 100%">
+<div class="inner">
+	<div id="loginBox" style="position: relative;width: 50%;min-width: 350px;height: 400px;margin-left: 20%;top: 50px;box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);background-color: #fafafa;">
+		<div style="margin-left:30%;margin-bottom:40px;">
+			<h2>관리자 로그인</h2>
 		</div>
-		
-		<div style="width: 100%; border: solid; float: left;" >
-			<button type="button" id="login" onclick="submitVal('login')">로그인</button>
+		<div style="position:relative; width: 50%; height: 50%;margin-left:30%;">
+			<form id="loginForm" name="loginForm" method="post" style="box-shadow:none;">
+				
+				
+				<div style="width: 100%; float: left;">
+					<p style="margin-bottom:5px;">아이디</p>
+					<input type="text" id="adminId" name="adminId" placeholder="아이디입력" style="width: 100%;margin-bottom:15px;" class="form-control">
+				</div>
+				<div style="width: 100%; float: left;">
+					<p style="margin-bottom:5px;">비밀번호</p>
+					<input type="password" id="adminPw" name="adminPw" placeholder="비밀번호입력" style="width:100%;margin-bottom:15px;" class="form-control">
+				</div>
+				<div style="width: 100%; float: left;" >
+					<button type="button" id="login" onclick="submitVal('login')">로그인</button>
+				</div>
+				
+			</form>
 		</div>
-		<div>
-			관리자 로그인 화면입니다.		
-		</div>
-	</form>
-	
+	</div>
 </div>
 
 </body>
+<%@ include file="/WEB-INF/views/comm/footer.jsp" %>
 </html>

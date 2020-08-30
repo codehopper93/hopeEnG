@@ -233,6 +233,13 @@ button {
 
 button:focus {
 	outline:none;
+	border:2px solid #6c96ae;
+/*   outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; */
+}
+button:hover {
+	background-color:#5c553e;
+	
 /*   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color; */
 }
@@ -272,9 +279,10 @@ button,
 [type=submit] {
   -webkit-appearance: button;
   background-color:black;
-  border:1px solid #fff;
+  border:2px solid #fff;
   color:#fff;
   padding:8px;
+  border-radius: 0.4rem;
 }
 
 button:not(:disabled),
@@ -376,6 +384,8 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 2rem;
+  padding-top: 45px;
+  margin-bottom:30px;
 }
 
 h3, .h3 {
@@ -562,8 +572,20 @@ pre code {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
-  min-height:840px;
+  min-height:740px;
   margin-top:93px;
+}
+
+form{
+	box-shadow: 0 2px 4px 2px rgba(0,0,0,.2);
+    padding: 15px;
+}
+
+form label{
+	float: left;
+    width: 10%;
+    line-height: 2rem;
+    min-width: 120px;
 }
 #mainNav .container{
 	min-height:auto;
@@ -1353,7 +1375,7 @@ pre code {
 
   .col-lg-4 {
     flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
+    max-width: 31%;
   }
 
   .col-lg-5 {
@@ -2045,47 +2067,98 @@ pre code {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.form-control-mid {
+  display: block;
+  width: 300px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control-small {
+  display: block;
+  width: 200px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     transition: none;
   }
 }
-.form-control::-ms-expand {
+.form-control::-ms-expand,
+.form-control-mid::-ms-expand,
+.form-control-small::-ms-expand{
   background-color: transparent;
   border: 0;
 }
-.form-control:-moz-focusring {
+.form-control:-moz-focusring,
+.form-control-mid:-moz-focusring,
+.form-control-small:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #495057;
 }
-.form-control:focus {
+.form-control:focus,
+.form-control-mid:focus,
+.form-control-small:focus  {
   color: #495057;
   background-color: #fff;
   border-color: #ffeeb5;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 54, 0.25);
 }
-.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder,
+.form-control-mid::-webkit-input-placeholder,
+.form-control-small::-webkit-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-moz-placeholder {
+.form-control::-moz-placeholder,
+.form-control-mid::-moz-placeholder,
+.form-control-small::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder,
+.form-control-mid:-ms-input-placeholder,
+.form-control-small:-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::-ms-input-placeholder {
+.form-control::-ms-input-placeholder,
+.form-control-mid::-ms-input-placeholder,
+.form-control-small::-ms-input-placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control::placeholder {
+.form-control::placeholder,
+.form-control-mid::placeholder,
+.form-control-small::placeholder {
   color: #6c757d;
   opacity: 1;
 }
-.form-control:disabled, .form-control[readonly] {
+.form-control:disabled, .form-control[readonly],
+.form-control-mid:disabled, .form-control-mid[readonly],
+.form-control-small:disabled, .form-control-small[readonly] {
   background-color: #e9ecef;
   opacity: 1;
 }
@@ -2516,8 +2589,8 @@ fieldset:disabled a.btn {
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #fec810;
-  border-color: #fec503;
+  background-color: #e1bc3e;
+  border-color: #e1bc3e;
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -10110,7 +10183,7 @@ img::-moz-selection {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: #212529;
-  position:relative;
+  position:fixed;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10157,7 +10230,7 @@ img::-moz-selection {
     height: 2rem;
     transition: height 0.3s ease-in-out;
   }
-  #mainNav.navbar-shrink {
+/*   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #212529;
@@ -10168,7 +10241,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
     height: 1.5rem;
-  }
+  } */
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
@@ -10181,6 +10254,7 @@ header.masthead {
   padding-bottom: 6rem; */
   text-align: center;
   color: #fff;
+  margin-top:93px;
   /* background-image: url("../image/img/header-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -10555,4 +10629,35 @@ section#contact form#contactForm :-ms-input-placeholder {
   color:#fff;
   background-color:#212529;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+
+.paging{
+	margin: 0 auto;
+    display: table;
+}
+.paging ul{
+	list-style:none;
+}
+.paging li{
+	float: left;
+    margin-right: 7px;
+    width: 37px;
+    height: 37px;
+    line-height: 37px;
+}
+.paging li a{
+    display: block;
+    width: 37px;
+    height: 37px;
+    color: #636363;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #c5c7cc;
+    background-color: #fff;
+    text-decoration:none;
+}
+.paging li a:hover{
+    background-color: #636363;
+    color: #fff;
 }

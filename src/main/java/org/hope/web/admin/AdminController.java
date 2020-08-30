@@ -4,6 +4,8 @@ import org.hope.web.admin.LoginDTO;
 import org.hope.web.domain.BraaVO;
 import org.hope.web.service.BraaService;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -67,9 +69,9 @@ public class AdminController {
 	
 	//로그아웃
 	@RequestMapping(value = "/logout.do", method = RequestMethod.GET)
-	public String logout(Locale locale,HttpSession session, Model model) {
+	public String logout(Locale locale,HttpSession session, Model model, HttpServletResponse response) throws IOException {
 		session.invalidate();
-		return "admin/logout";
+		return "/home";
 	} 
 
 	//관리자 문의 게시글 처리
